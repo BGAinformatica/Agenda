@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Large Text" />
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:layout_marginTop="10dp"
+        android:onClick="editar" />
+
+    <Button
+        android:id="@+id/deletar"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Deletar"
+        android:onClick="deletar" />
+    <Button
+        android:id="@+id/visualizar"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Vizualizar"
+        android:onClick="deletar" />
+
+</LinearLayout>
