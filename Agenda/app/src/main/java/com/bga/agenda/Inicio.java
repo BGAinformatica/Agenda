@@ -32,4 +32,7 @@ public class Inicio extends Activity {
         startActivity(intent);
     }
 
+    public void Visualizar(View view){
+        startActivity(new Intent(this, Visualizar.class));
+    }
 }

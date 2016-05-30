@@ -1,12 +1,35 @@
 package com.bga.agenda;
 
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+
 public class Evento {
     private String nome;
+    private String tiposelecionado;
     private String data;
     private String horainicio;
     private String horatermino;
     private String local;
+    private String repetirtxt;
     private String repetir;
+
+
+    public String getRepetirtxt() {
+        return repetirtxt;
+    }
+
+    public void setRepetirtxt(String repetirtxt) {
+        this.repetirtxt = repetirtxt;
+    }
+
+    public String getTiposelecionado() {
+        return tiposelecionado;
+    }
+
+    public void setTiposelecionado(String tiposelecionado) {
+        this.tiposelecionado = tiposelecionado;
+    }
 
     public String getDescricao() {
         return descricao;
@@ -84,4 +107,7 @@ public class Evento {
     public void setData(String data) {
         this.data = data;
     }
+
 }
+
+

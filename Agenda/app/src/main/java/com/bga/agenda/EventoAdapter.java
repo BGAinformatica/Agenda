@@ -56,11 +56,13 @@ public class EventoAdapter extends BaseAdapter {
             public void onClick(View arg0) {
                 Intent intent = new Intent(context, Cadastro.class);
                 intent.putExtra("nome", list.get(auxPosition).getNome());
+                intent.putExtra("tipos", list.get(auxPosition).getTiposelecionado());
                 intent.putExtra("data", list.get(auxPosition).getData());
                 intent.putExtra("horainicio", list.get(auxPosition).getHorainicio());
                 intent.putExtra("horatermino", list.get(auxPosition).getHoratermino());
                 intent.putExtra("local", list.get(auxPosition).getLocal());
                 intent.putExtra("participantes", list.get(auxPosition).getParticipantes());
+                intent.putExtra("repeticao", list.get(auxPosition).getRepetirtxt());
                 intent.putExtra("repetir", list.get(auxPosition).getRepetir());
                 intent.putExtra("descricao", list.get(auxPosition).getDescricao());
                 intent.putExtra("id", list.get(auxPosition).getId());

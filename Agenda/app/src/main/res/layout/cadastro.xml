@@ -1,5 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,6 +32,21 @@
 
         <requestFocus />
     </EditText>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinnertipos">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tiposelecionado"/>
 
     <EditText
         android:id="@+id/data"
@@ -77,6 +97,21 @@
         android:inputType="text"
         android:hint="Participantes"/>
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"
+            android:id="@+id/repeticao">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/repetirtxt"/>
+
     <EditText
         android:id="@+id/repetir"
         android:layout_width="match_parent"
@@ -112,3 +147,4 @@
         android:visibility="gone" />
 
 </LinearLayout>
+</ScrollView>
