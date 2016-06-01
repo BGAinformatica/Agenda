@@ -29,13 +29,9 @@
             android:id="@+id/button2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Alterar Eventos"
+            android:text="Eventos"
             android:onClick="getActivity" />
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Visualizar"
-            android:onClick="visualizar"/>
+
 
     </LinearLayout>
 
