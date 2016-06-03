@@ -44,7 +44,9 @@ public class Cadastro extends Activity {
         nome_evento = (EditText) findViewById(R.id.nome);
         //tiposelecionado = (EditText) findViewById(R.id.tiposelecionado);
         data_evento = (EditText) findViewById(R.id.data);
+        data_evento.addTextChangedListener(Mask.insert("##/##/####", data_evento));
         hora_inicio = (EditText) findViewById(R.id.horainicio);
+        hora_inicio.addTextChangedListener(Mask.insert("##:##", hora_inicio));
         hora_termino = (EditText) findViewById(R.id.horatermino);
         local_evento = (EditText) findViewById(R.id.local);
         participantes = (EditText) findViewById(R.id.participantes);

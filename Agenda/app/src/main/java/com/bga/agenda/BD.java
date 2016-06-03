@@ -60,7 +60,7 @@ public class BD {
     public void deletar(Evento evento){
         bd.delete("evento", "_id = "+evento.getId(), null);
     }
-
+                
 
     public List<Evento> buscar(){
         List<Evento> list = new ArrayList<Evento>();
