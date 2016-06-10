@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <EditText
+       android:layout_width="200dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/txtvpesquisar"
+       android:hint="Digite uma data"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="btnpesquisar"
+       android:text="Pesquisar"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="deletar"
+            android:onClick="btnapagar"/>
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listae"
+        android:visibility="gone">
+
+    </ListView>
+
+</LinearLayout>

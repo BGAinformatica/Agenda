@@ -2,21 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/nome"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
-        android:text="Large Text" />
+        android:text="Large Text"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
 
     <Button
         android:id="@+id/editar"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="Editar"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="10dp"
         android:onClick="editar" />
 
@@ -34,5 +43,10 @@
         android:layout_marginTop="10dp"
         android:text="Vizualizar"
         android:onClick="visualizar" />
+
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

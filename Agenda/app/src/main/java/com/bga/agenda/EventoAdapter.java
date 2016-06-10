@@ -4,17 +4,22 @@ import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class EventoAdapter extends BaseAdapter {
     private Context context;
     private List<Evento> list;
+    SQLiteDatabase bd;
+
 
     public EventoAdapter(Context context, List<Evento> list){
         this.context = context;
@@ -46,11 +51,13 @@ public class EventoAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.evento, null);
 
+
         TextView tv = (TextView) layout.findViewById(R.id.nome);
         tv.setText(list.get(position).getNome());
 
 
-        Button editarBt = (Button) layout.findViewById(R.id.editar);
+
+                Button editarBt = (Button) layout.findViewById(R.id.editar);
         editarBt.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -91,7 +98,7 @@ public class EventoAdapter extends BaseAdapter {
         });
 
         Button deletarBt = (Button) layout.findViewById(R.id.deletar);
-        deletarBt.setOnClickListener(new Button.OnClickListener(){
+        deletarBt.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 BD bd = new BD(context);
@@ -101,7 +108,10 @@ public class EventoAdapter extends BaseAdapter {
             }
         });
 
+
         return layout;
+
     }
+
 
 }

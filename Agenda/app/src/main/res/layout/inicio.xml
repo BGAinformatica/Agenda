@@ -8,29 +8,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Inicio" >
+    tools:context=".Inicio"
+    android:weightSum="1">
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/my_imagem_bg"
+        android:layout_gravity="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
             android:text="Novo Evento"
-            android:onClick="getActivity" />
+            android:onClick="getActivity"
+            android:background="@drawable/btn"/>
 
         <Button
             android:id="@+id/button2"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
             android:text="Eventos"
-            android:onClick="getActivity" />
+            android:onClick="getActivity"
+            android:background="@drawable/btn" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
+            android:text="Pesquisar"
+            android:onClick="pesquisarevento"
+            android:background="@drawable/btn" />
 
 
     </LinearLayout>

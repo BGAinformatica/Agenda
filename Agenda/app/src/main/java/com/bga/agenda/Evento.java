@@ -13,7 +13,25 @@ public class Evento {
     private String local;
     private String repetirtxt;
     private String repetir;
+    private String pesquisa;
+    private String pesquisa_evento;
 
+
+    public String getPesquisa_evento() {
+        return pesquisa_evento;
+    }
+
+    public void setPesquisa_evento(String pesquisa_evento) {
+        this.pesquisa_evento = pesquisa_evento;
+    }
+
+    public String getPesquisa() {
+        return pesquisa;
+    }
+
+    public void setPesquisa(String pesquisa) {
+        this.pesquisa = pesquisa;
+    }
 
     public String getRepetirtxt() {
         return repetirtxt;
@@ -107,6 +125,7 @@ public class Evento {
     public void setData(String data) {
         this.data = data;
     }
+
 
 }
 

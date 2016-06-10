@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res-auto"
     package="com.bga.agenda">
+
 
     <application
         android:allowBackup="true"
@@ -24,6 +26,11 @@
             android:name="com.bga.agenda.Listaevento">
         </activity>
         <activity android:name=".Visualizar"></activity>
+        <activity android:name=".Pesquisar"></activity>
+
+
     </application>
+
+
 
 </manifest>

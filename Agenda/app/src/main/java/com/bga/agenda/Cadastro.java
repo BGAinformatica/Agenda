@@ -8,11 +8,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.Calendar;
 
 
 public class Cadastro extends Activity {
@@ -35,7 +42,6 @@ public class Cadastro extends Activity {
     private EditText repetir_evento;
     private EditText descricao_evento;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +58,6 @@ public class Cadastro extends Activity {
         participantes = (EditText) findViewById(R.id.participantes);
         repetir_evento = (EditText) findViewById(R.id.repetir);
         descricao_evento = (EditText) findViewById(R.id.descricao);
-
 
         salvarBt = (Button) findViewById(R.id.button1);
         editarBt = (Button) findViewById(R.id.button2);
@@ -100,6 +105,8 @@ public class Cadastro extends Activity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+
 
 
 
@@ -179,5 +186,6 @@ public class Cadastro extends Activity {
 
         Toast.makeText(this, "Evento \""+evento.getNome()+"\" atuailizado com sucesso.", Toast.LENGTH_SHORT).show();
     }
+
 
 }

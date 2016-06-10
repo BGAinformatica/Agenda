@@ -1,29 +1,25 @@
 package com.bga.agenda;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.view.View;
-import android.widget.Toast;
 
 public class BD {
     private SQLiteDatabase bd;
     //private Context context;
 
-    public BD(Context context){
+    public BD(Context context) {
         BDCore auxBd = new BDCore(context);
         bd = auxBd.getWritableDatabase();
     }
 
 
-
-
-    public void inserir(Evento evento){
+    public void inserir(Evento evento) {
         ContentValues valores = new ContentValues();
         valores.put("nome", evento.getNome());
         valores.put("tipos", evento.getTiposelecionado());
@@ -40,7 +36,7 @@ public class BD {
     }
 
 
-    public void atualizar(Evento evento){
+    public void atualizar(Evento evento) {
         ContentValues valores = new ContentValues();
         valores.put("nome", evento.getNome());
         valores.put("tipos", evento.getTiposelecionado());
@@ -57,21 +53,22 @@ public class BD {
     }
 
 
-    public void deletar(Evento evento){
-        bd.delete("evento", "_id = "+evento.getId(), null);
+    public void deletar(Evento evento) {
+        bd.delete("evento", "_id = " + evento.getId(), null);
     }
-                
 
-    public List<Evento> buscar(){
+
+
+    public List<Evento> buscar() {
         List<Evento> list = new ArrayList<Evento>();
         String[] colunas = new String[]{"_id", "nome", "tipos", "data", "horainicio", "horatermino", "local", "participantes", "repeticao", "repetir", "descricao"};
 
         Cursor cursor = bd.query("evento", colunas, null, null, null, null, "nome ASC");
 
-        if(cursor.getCount() > 0){
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
 
-            do{
+            do {
 
                 Evento e = new Evento();
                 e.setId(cursor.getLong(0));
@@ -87,11 +84,36 @@ public class BD {
                 e.setDescricao(cursor.getString(10));
                 list.add(e);
 
-            }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
 
-        return(list);
+        return (list);
     }
 
+    public Cursor mostrarevento() {
+
+        String[] colunas = new String[]{"_id", "nome", "tipos", "data", "horainicio", "horatermino", "local", "participantes", "repeticao", "repetir", "descricao"};
+
+        return bd.query("evento", colunas, null, null, null, null, null);
+
+
+    }
+
+    public Cursor pesquisarevento(String data){
+
+        String[] colunas = new String[]{"_id", "nome", "tipos", "data", "horainicio", "horatermino", "local", "participantes", "repeticao", "repetir", "descricao"};
+
+        return bd.query("evento", colunas, "data" + "=?", new String[]{data}, null, null, null);
+
+
+    }
+
+    public Cursor deleteevento(String data){
+
+        String[] colunas = new String[]{"_id", "nome", "tipos", "data", "horainicio", "horatermino", "local", "participantes", "repeticao", "repetir", "descricao"};
+        String[] where = new String []{"data"};
+
+        return bd.rawQuery("Select * from evento where data=?"+ Arrays.toString(new String[]{data}),null);
+    }
 
 }

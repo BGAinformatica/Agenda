@@ -32,4 +32,10 @@ public class Inicio extends Activity {
         startActivity(intent);
     }
 
+    public void pesquisarevento(View view){
+
+        Intent telavisualizar = new Intent(this, Pesquisar.class);
+        startActivity(telavisualizar);
+    }
+
 }
