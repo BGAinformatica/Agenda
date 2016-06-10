@@ -65,8 +65,6 @@ public class Pesquisar extends Activity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(), "Click ListItem Number " + position, Toast.LENGTH_LONG).show();
-
 
             }
         });
@@ -77,8 +75,6 @@ public class Pesquisar extends Activity{
 
         listae.setVisibility(View.VISIBLE);
 
-      /*  bd.execSQL("delete from evento where data = ?",
-                new String[]{txtvpesquisa.getText().toString()});*/
 
         Cursor c = manager.pesquisarevento(txtvpesquisa.getText().toString());
         adapter.changeCursor(c);
