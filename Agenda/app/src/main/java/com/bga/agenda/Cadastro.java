@@ -54,6 +54,7 @@ public class Cadastro extends Activity {
         hora_inicio = (EditText) findViewById(R.id.horainicio);
         hora_inicio.addTextChangedListener(Mask.insert("##:##", hora_inicio));
         hora_termino = (EditText) findViewById(R.id.horatermino);
+        hora_termino.addTextChangedListener(Mask.insert("##:##", hora_termino));
         local_evento = (EditText) findViewById(R.id.local);
         participantes = (EditText) findViewById(R.id.participantes);
         repetir_evento = (EditText) findViewById(R.id.repetir);
